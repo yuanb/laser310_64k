@@ -7,15 +7,15 @@ Analyzing Verilog file "Z:/laser310_64k/top.v" into library work
 Analyzing Verilog file "Z:/laser310_64k/laser310_64k_tb.v" into library work
 Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "Z:/laser310_64k/laser310_64k_tb.v" Line 41: Port led1 is not connected to this instance
+WARNING:HDLCompiler:1016 - "Z:/laser310_64k/laser310_64k_tb.v" Line 43: Port AddrIO is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 77860 KB
-Fuse CPU Usage: 210 ms
+Fuse Memory Usage: 77864 KB
+Fuse CPU Usage: 200 ms
 Compiling module top
 Compiling module ram64k_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
 Built simulation executable Z:/laser310_64k/ram64k_tb_isim_beh.exe
-Fuse Memory Usage: 81320 KB
+Fuse Memory Usage: 82348 KB
 Fuse CPU Usage: 210 ms

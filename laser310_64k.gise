@@ -75,27 +75,27 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1609128234" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1609128234">
+    <transform xil_pn:end_ts="1609129115" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1609129115">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1609128234" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1609128234">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="laser310_64k_tb.v"/>
-      <outfile xil_pn:name="top.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1609128234" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="9126084723841105521" xil_pn:start_ts="1609128234">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1609128234" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1609128234">
+    <transform xil_pn:end_ts="1609129115" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1609129115">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="laser310_64k_tb.v"/>
       <outfile xil_pn:name="top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1609128236" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6587908333058852033" xil_pn:start_ts="1609128234">
+    <transform xil_pn:end_ts="1609129115" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="9126084723841105521" xil_pn:start_ts="1609129115">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1609129115" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1609129115">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="laser310_64k_tb.v"/>
+      <outfile xil_pn:name="top.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1609129117" xil_pn:in_ck="2324111493180607759" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6587908333058852033" xil_pn:start_ts="1609129115">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -107,14 +107,14 @@
       <outfile xil_pn:name="ram64k_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1609128870" xil_pn:in_ck="-3888000148551770747" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1597600999213389476" xil_pn:start_ts="1609128870">
+    <transform xil_pn:end_ts="1609129117" xil_pn:in_ck="5016214096227716697" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1597600999213389476" xil_pn:start_ts="1609129117">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="ram64k_tb_isim_beh1.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1609128207" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1609128207">
       <status xil_pn:value="SuccessfullyRun"/>
