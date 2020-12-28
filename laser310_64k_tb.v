@@ -29,8 +29,10 @@ module ram64k_tb;
 	reg WR_N;
 	reg RD_N;
 	reg MREQ_N;
+	reg IORQ_N;
 
 	// Outputs
+	wire [1:0] RAM_A1514;
 	wire RAM_CS_N;
 	wire RAM_OE_N;
 	wire RAM_WE_N;
@@ -45,6 +47,7 @@ module ram64k_tb;
 		.RD_N(RD_N),
 		.MREQ_N(MREQ_N),
 		/*Output*/
+		.RAM_A1514(RAM_A1514),
 		.RAM_CS_N(RAM_CS_N), 
 		.RAM_OE_N(RAM_OE_N),
 		.RAM_WE_N(RAM_WE_N)
