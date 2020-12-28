@@ -20,5 +20,15 @@
 <msg type="warning" file="Cpld" num="1239" delta="old" >The global <arg fmt="%s" index="1">clock</arg> designation (BUFG) on signal &apos;<arg fmt="%s" index="2">Addr_3_IBUF</arg>&apos; is ignored. Most likely the signal is gated and therefore cannot be used as a global control signal.
 </msg>
 
+<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">_old_bank_1&lt;1&gt;</arg>&apos; are in combinational feedback loops.
+These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
+Timing analysis of paths involving this node may be inaccurate or incomplete.
+</msg>
+
+<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">_old_bank_1&lt;0&gt;</arg>&apos; are in combinational feedback loops.
+These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
+Timing analysis of paths involving this node may be inaccurate or incomplete.
+</msg>
+
 </messages>
 

@@ -1,5 +1,12 @@
-
 .DS_Store
 isim/
 top_html/
-
+_ngo/
+*.html
+*.xml
+*.cmd_log
+*.gyd
+*.jed
+*.mfd
+*.nga
+*.ngc

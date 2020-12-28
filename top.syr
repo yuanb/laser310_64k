@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: top.prj
 
@@ -102,7 +102,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <top>.
     Related source file is "top.v".
-    Found 5-bit comparator greatequal for signal <RAM_CS_N$cmp_ge0000> created at line 28.
+    Found 5-bit comparator greatequal for signal <old_RAM_CS_N_2$cmp_ge0000> created at line 71.
     Summary:
 	inferred   1 Comparator(s).
 Unit <top> synthesized.
@@ -131,6 +131,8 @@ Found no macro
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: RAM_A1514_cmp_eq0002, bank<0>, bank_cmp_eq0000, _old_bank_1<0>, RAM_A1514<1>.
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: RAM_A1514<0>, _old_bank_1<1>, bank<1>, RAM_A1514_cmp_eq0001.
 
 Optimizing unit <top> ...
 
@@ -161,29 +163,30 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 13
+# IOs                              : 22
 
 Cell Usage :
-# BELS                             : 12
-#      AND2                        : 3
-#      AND3                        : 2
-#      INV                         : 5
-#      OR2                         : 1
+# BELS                             : 38
+#      AND2                        : 12
+#      AND3                        : 3
+#      AND4                        : 1
+#      INV                         : 16
+#      OR2                         : 5
 #      XOR2                        : 1
-# IO Buffers                       : 13
-#      IBUF                        : 8
-#      OBUF                        : 5
+# IO Buffers                       : 22
+#      IBUF                        : 15
+#      OBUF                        : 7
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.73 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.58 secs
  
 --> 
 
 Total memory usage is 145924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
