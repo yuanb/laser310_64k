@@ -1,0 +1,9 @@
+ISim log file
+Running: Z:\laser310_64k\ram64k_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -view Z:/laser310_64k/laser310_64k.wcfg -wdb Z:/laser310_64k/ram64k_tb_isim_beh1.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

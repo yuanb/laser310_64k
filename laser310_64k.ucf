@@ -1,0 +1,94 @@
+#
+#                        USB
+#                 /---------------\ 
+#             GND |               | GND
+#            3.3v |      TOP      | 5v 
+#         J2.3_E1 |               | J3.3_E2
+#         J2.4_F1 |               | J3.4_B1_CBUS3
+#         J2.5_F4 |      TOP      | J3.5_D2_CBUS2
+#   J2.6_F6_CBUS1 |               | J3.6_C2
+#   J2.7_E6_CBUS0 |               | J3.7_B4
+#         J2.8_D6 |               | J3.8_B5
+#         J2.9_D7 |               | J3.9_B6_CLK
+#        J2.10_G1 |               | J3.10_A3
+#        J2.11_G4 |               | J3.11_A4
+#        J2.12_G5 |               | J3.12_A6
+#        J2.13_G7 |               | J3.13_A7
+#   J2.14_G6_BTN1 |               | J3.14_B7
+#   J2.15_E7_LED2 |               | J3.15_C7_LED1
+#                 \---------------/
+#
+#
+#                        USB
+#                 /---------------\ 
+#             GND |               | GND
+#              5v |    BOTTOM     | 3.3v 
+#         J3.3_E2 |               | J2.3_E1
+#   J3.4_B1_CBUS3 |               | J2.4_F1
+#   J3.5_D2_CBUS2 |    BOTTOM     | J2.5_F4
+#         J3.6_C2 |               | J2.6_F6_CBUS1
+#         J3.7_B4 |               | J2.7_E6_CBUS0
+#         J3.8_B5 |               | J2.8_D6
+#     J3.9_B6_CLK |               | J2.9_D7
+#        J3.10_A3 |               | J2.10_G1
+#        J3.11_A4 |               | J2.11_G4
+#        J3.12_A6 |               | J2.12_G5
+#        J3.13_A7 |               | J2.13_G7
+#        J3.14_B7 |               | J2.14_G6_BTN1
+#   J3.15_C7_LED1 |               | J2.15_E7_LED2
+#                 \---------------/
+
+## Input
+# A15 = Addr<4>, A14 = Addr<3>, A13 = Addr<2>, A12 = Addr<1>, A11 = Addr<0>
+net "Addr<0>"	loc = "A3";
+net "Addr<1>"	loc = "A4";
+net "Addr<2>"	loc = "A6";
+net "Addr<3>"	loc = "A7";
+net "Addr<4>"	loc = "B7";
+net "MREQ_N"	loc = "E1";
+net "RD_N"		loc = "F1";
+net "WR_N"		loc = "E2";
+
+## Output
+net "RAM_CS_N"	loc = "G5";
+net "RAM_OE_N"	loc = "F4";
+net "RAM_WE_N"	loc = "G7";
+net "led1"		loc = "C7";
+net "led2"		loc = "E7";
+
+
+#net "WR_N" 		loc = "D6";	//	/WR
+#net "MREQ_N"	loc = "D7";	//	/MREQ
+#net "Addr<0>"	loc = "E1";	//	A13
+#net "Addr<1>"	loc = "F1";	//	A14
+#net "Addr<2>"	loc = "F4";	//	A15
+#net "Y_N"		loc = "E2";	// /Y output
+#net "led1"		loc = "C7";	// LED1
+#net "led2"		loc = "E7";
+
+#net "clk" 	loc = "B6";
+#net "led1" 	loc = "C7";
+#net "led2" 	loc = "E7";
+#net "btn" 	loc = "G6";
+#net "io<0>" loc = "D7";
+#net "io<1>" loc = "D6";
+#net "io<2>" loc = "B7";
+#net "io<3>" loc = "A7";
+#net "io<4>" loc = "A6";
+#net "io<5>" loc = "F4";
+#net "io<6>" loc = "G5";
+#net "io<7>" loc = "G7";
+#net "io<8>" loc = "C2";
+#net "io<9>" loc = "A3";
+#net "io<10>" loc = "B4";
+#net "io<11>" loc = "A4";
+#net "io<12>" loc = "B5";
+#net "io<13>" loc = "E1";
+#net "io<14>" loc = "E2";
+#net "io<15>" loc = "F1";
+#net "io<16>" loc = "G1";
+#net "io<17>" loc = "G4";
+#net "CBUS0" loc = "E6";
+#net "CBUS1" loc = "F6";
+#net "CBUS2" loc = "D2";
+#net "CBUS3" loc = "B1";

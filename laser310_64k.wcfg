@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/laser310_64k/ram64k_tb_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ram64k_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/ram64k_tb/Addr[4]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">Addr[4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/Addr[3]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">Addr[3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/Addr[2]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">Addr[2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/Addr[1]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">Addr[1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/Addr[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/RAM_CS_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_CS_N</obj_property>
+      <obj_property name="ObjectShortName">RAM_CS_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/RAM_OE_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_OE_N</obj_property>
+      <obj_property name="ObjectShortName">RAM_OE_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/RAM_WE_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_WE_N</obj_property>
+      <obj_property name="ObjectShortName">RAM_WE_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/Addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/WR_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WR_N</obj_property>
+      <obj_property name="ObjectShortName">WR_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/RD_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RD_N</obj_property>
+      <obj_property name="ObjectShortName">RD_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/MREQ_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MREQ_N</obj_property>
+      <obj_property name="ObjectShortName">MREQ_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/error_msg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">error_msg[39:0]</obj_property>
+      <obj_property name="ObjectShortName">error_msg[39:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,50 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Fri Dec 25 15:53:27 2020
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project: 'C:\dev\cpld_learning\vzdos138\\auto_project.ipf' already exists.
+Original project has been renamed to'C:\dev\cpld_learning\vzdos138\\auto_project_1.ipf'.
+Project: C:\dev\cpld_learning\vzdos138\\auto_project.ipf created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port svf -file"C:/dev/cpld_learning/laser310_64k/laser310_64k.svf"
+// *** BATCH CMD : addDevice -p 1 -file"C:/dev/cpld_learning/laser310_64k/top.jed"
+'1': Loading file 'C:/dev/cpld_learning/laser310_64k/top.jed' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/dev/Xilinx/14.7/ISE_DS/ISE/xc9500xl/data/xc9572xl.bsd...
+INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\dev\cpld_learning\vzdos138\\auto_project.ipf"
+Backup of auto project 'C:\dev\cpld_learning\vzdos138\\auto_project_1.ipf'created.
+Project: 'C:\dev\cpld_learning\vzdos138\\auto_project.ipf' created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\dev\cpld_learning\vzdos138\\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

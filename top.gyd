@@ -1,0 +1,31 @@
+Pin Freeze File:  version P.20131013
+
+9572XL48 XC9572XL-10-CS48
+Addr<0> S:PINA3
+Addr<1> S:PINA4
+Addr<2> S:PINA6
+Addr<3> S:PINA7
+Addr<4> S:PINB7
+MREQ_N S:PINE1
+RD_N S:PINF1
+WR_N S:PINE2
+RAM_CS_N S:PING5
+RAM_OE_N S:PINF4
+RAM_WE_N S:PING7
+led1 S:PINC7
+led2 S:PINE7
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_6 led1_OBUF
+
+PARTITION FB2_2 RAM_OE_N_OBUF
+PARTITION FB2_5 RAM_CS_N_OBUF
+PARTITION FB2_9 RAM_WE_N_OBUF
+PARTITION FB2_15 led2_OBUF
+
+
+
+
