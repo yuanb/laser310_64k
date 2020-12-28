@@ -30,20 +30,20 @@ module top(/*Input*/ Addr, AddrIO, WR_N, RD_N, MREQ_N, IORQ_N, D1D0,/*Output*/ R
 	//FFFFh = 1111 1111 1111 1111
 	//Mask = 1111 1000 0000 0000
 	//A15,A14,A13,A12,A11 range: [10111,11111] = [17,1F]
-	
+
+	reg validCPUState;
+	reg validLaser310Space;
 	reg[1:0] bank;
-	//initial bank = 2'b01;
+
+	initial bank = 2'b01;
 	
 	always @(IORQ_N, AddrIO, D1D0, bank)
 	begin
-		if (IORQ_N == 1'b0 && AddrIO == 4'b0111)
+		if (IORQ_N == 1'b0 && MREQ_N == 1'b1 && WR_N==1'b0 && RD_N==1'b1 && AddrIO == 4'b0111)
 			bank = D1D0;
-		//bank 0 is always online
-		if (bank == 2'b00)
-			bank = 2'b01;
 	end
-
-	always @(Addr, WR_N, RD_N, MREQ_N, bank)
+	
+	always @(Addr, WR_N, RD_N, MREQ_N, IORQ_N, bank)
 	begin
 		if (Addr == 5'b1011_1)
 				RAM_A1514 = 2'b00;	//first 16k bank(page 0), 0000h - 3FFFh
@@ -67,8 +67,12 @@ module top(/*Input*/ Addr, AddrIO, WR_N, RD_N, MREQ_N, IORQ_N, D1D0,/*Output*/ R
 				endcase
 			end		
 
-		//RAM_CS_N is low if : 1. /MREQ; 2. Valid Addr;	3. WR and RD are valid.	
-		RAM_CS_N = (MREQ_N==1'b0 && (Addr>=5'b1011_1 && Addr<=5'b1111_1)==1'b1 && ((WR_N==0 & RD_N==1) | (WR_N==1 & RD_N==0)) ) ? 1'b0 : 1'b1;
+		//RAM_CS_N is low if : 1. /MREQ; 2. Valid Addr;	3. WR and RD are valid; 4. MREQ and IORQ are valid.
+		validCPUState = (((WR_N==0 & RD_N==1) | (WR_N==1 & RD_N==0)) && ((MREQ_N==0 & IORQ_N==1) | (MREQ_N==1 & IORQ_N==0)));
+		validLaser310Space = (Addr>=5'b1011_1 && Addr<=5'b1111_1);
+
+		RAM_CS_N = (MREQ_N==1'b0 && validLaser310Space && validCPUState) ? 1'b0 : 1'b1;
+		
 		RAM_OE_N = (RAM_CS_N==0 && WR_N==1) ? 1'b0 : 1'b1;
 		RAM_WE_N = (RAM_CS_N==0 && WR_N==0) ? 1'b0 : 1'b1;
 
