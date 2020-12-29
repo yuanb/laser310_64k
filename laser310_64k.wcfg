@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="16" />
    <wvobject fp_name="/ram64k_tb/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -18,6 +18,8 @@
    <wvobject fp_name="/ram64k_tb/Addr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Addr[4:0]</obj_property>
       <obj_property name="ObjectShortName">Addr[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
    </wvobject>
    <wvobject fp_name="/ram64k_tb/AddrIO" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">AddrIO[3:0]</obj_property>
@@ -47,6 +49,12 @@
       <obj_property name="ElementShortName">IORQ_N</obj_property>
       <obj_property name="ObjectShortName">IORQ_N</obj_property>
    </wvobject>
+   <wvobject fp_name="/ram64k_tb/RESET_N" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RESET_N</obj_property>
+      <obj_property name="ObjectShortName">RESET_N</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+   </wvobject>
    <wvobject fp_name="/ram64k_tb/RAM_CS_N" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">RAM_CS_N</obj_property>
       <obj_property name="ObjectShortName">RAM_CS_N</obj_property>
@@ -56,10 +64,20 @@
    <wvobject fp_name="/ram64k_tb/RAM_OE_N" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">RAM_OE_N</obj_property>
       <obj_property name="ObjectShortName">RAM_OE_N</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
    </wvobject>
    <wvobject fp_name="/ram64k_tb/RAM_WE_N" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">RAM_WE_N</obj_property>
       <obj_property name="ObjectShortName">RAM_WE_N</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ram64k_tb/bank" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bank[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bank[1:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
    </wvobject>
    <wvobject fp_name="/ram64k_tb/RAM_A1514" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">RAM_A1514[1:0]</obj_property>

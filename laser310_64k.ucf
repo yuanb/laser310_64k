@@ -46,6 +46,7 @@ net "IORQ_N"	loc = "C2";
 net "RD_N"		loc = "B4";
 net "WR_N"		loc = "B5";
 net "clk"		loc = "G1";
+net "RESET_N"	loc = "G4";
 net "Addr<0>"	loc = "A3";
 net "Addr<1>"	loc = "A4";
 net "Addr<2>"	loc = "A6";
