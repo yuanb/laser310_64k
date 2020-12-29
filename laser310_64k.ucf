@@ -40,21 +40,26 @@
 
 ## Input
 # A15 = Addr<4>, A14 = Addr<3>, A13 = Addr<2>, A12 = Addr<1>, A11 = Addr<0>
+net "MREQ_N"	loc = "E2";
+net "IORQ_N"	loc = "C2";
+net "RD_N"		loc = "B4";
+net "WR_N"		loc = "B5";
 net "Addr<0>"	loc = "A3";
 net "Addr<1>"	loc = "A4";
 net "Addr<2>"	loc = "A6";
 net "Addr<3>"	loc = "A7";
 net "Addr<4>"	loc = "B7";
-net "MREQ_N"	loc = "E1";
-net "RD_N"		loc = "F1";
-net "WR_N"		loc = "E2";
 
 ## Output
-net "RAM_CS_N"	loc = "G5";
-net "RAM_OE_N"	loc = "F4";
-net "RAM_WE_N"	loc = "G7";
-net "led1"		loc = "C7";
-net "led2"		loc = "E7";
+# RAM_A15 = RAM_Addr<4>, RAM_A14 = RAM_Addr<3>, RAM_A13 = RAM_Addr<2>, RAM_A12 = RAM_Addr<1>, RAM_A11 = RAM_Addr<0>,
+net "RAM_CS_N"			loc = "E1";
+net "RAM_OE_N"			loc = "F1";
+net "RAM_WE_N"			loc = "F4";
+net "RAM_A1514<0>"	loc = "D6";
+net "RAM_A1514<1>"	loc = "D7";
+
+net "led1"			loc = "C7";
+net "led2"			loc = "E7";
 
 
 #net "WR_N" 		loc = "D6";	//	/WR
