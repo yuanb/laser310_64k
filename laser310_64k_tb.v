@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -104,7 +104,7 @@ module ram64k_tb;
 					error_msg = "Good!";
 
 		//Test2. Invalid MREQ/IORQ
-		#99;
+		#100;
 		Addr = 5'bxxxxx;
 		AddrIO = 4'bxxxx;
 		WR_N = 0;
@@ -113,7 +113,6 @@ module ram64k_tb;
 		IORQ_N = 1;
 		D1D0 = 2'bxx;
 		testcase = "2. MREQ=IREQ";
-		#1;
 		if (RAM_CS_N !== 1)
 			begin
 				$display("Test2, RAM_CS_N is not 1 (MREQ=IREQ=1)");
@@ -219,7 +218,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test7. FFFFH, read access
-		#99;
+		#100;
 		Addr = 5'b11111;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -228,7 +227,6 @@ module ram64k_tb;
 		IORQ_N = 1;
 		D1D0 = 2'bxx;
 		testcase = "7. FFFFH /RD";
-		#1;
 		if (RAM_CS_N !==0 || RAM_WE_N !== 1 || RAM_OE_N !== 0 || RAM_A1514 !== 2'b01)
 			begin
 				$display("Test7, failed, expceting !CS, WE, !OE, A15A14= 01.");
@@ -238,7 +236,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test8. FFFFH, then B800H read access
-		#99;
+		#100;
 		Addr = 5'b11111;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -247,7 +245,6 @@ module ram64k_tb;
 		IORQ_N = 1;
 		D1D0 = 2'bxx;
 		testcase = "8. FFFFH /RD";
-		#1;
 		if (RAM_CS_N !==0 || RAM_WE_N !== 1 || RAM_OE_N !== 0 || RAM_A1514 !== 2'b01)
 			begin
 				$display("Test8, failed, expceting !CS, WE, !OE, A15A14= 01.");

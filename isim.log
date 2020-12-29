@@ -7,3 +7,33 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+Test3, invalid output
+Test4, invalid output
+Test5, invalid output
+Test6, failed, expceting !CS, WE, !OE, A15A14= 01.
+# run all
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Test4, invalid output
+Test5, invalid output
+Test6, failed, expceting !CS, WE, !OE, A15A14= 01.
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Test1, RAM_CS_N is not 1 (RD=WR=1)
+Finished circuit initialization process.
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

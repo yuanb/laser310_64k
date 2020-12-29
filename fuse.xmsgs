@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"Z:/laser310_64k/laser310_64k_tb.v" Line 43: Port <arg fmt="%s" index="1">AddrIO</arg> is not connected to this instance
-</msg>
-
 </messages>
 
