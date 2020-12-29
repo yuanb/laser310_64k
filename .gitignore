@@ -3,6 +3,7 @@ isim/
 top_html/
 _ngo/
 _xmsgs/
+xst/
 .DS_Store
 *.html
 *.xml
