@@ -25,6 +25,7 @@
 module ram64k_tb;
 
 	// Inputs
+	reg clk;
 	reg [4:0] Addr;
 	reg [3:0] AddrIO;	//A7 - A4,
 	reg WR_N;
@@ -47,6 +48,7 @@ module ram64k_tb;
 	// Instantiate the Unit Under Test (UUT)
 	top uut (
 		/*Input*/
+		.clk(clk),
 		.Addr(Addr), 
 		.AddrIO(AddrIO),
 		.WR_N(WR_N),
@@ -64,7 +66,11 @@ module ram64k_tb;
 		.led2(led2)
 	);
 
+   always  
+		#10  clk = !clk; 
+ 
 	initial begin
+		clk = 0;
 		//Test1. Invalid RD/WR
 		Addr = 5'bxxxxx;
 		AddrIO = 4'bxxxx;
@@ -81,20 +87,18 @@ module ram64k_tb;
 				error_msg = "Error";
 			end
 		else
-			#99;
+			#50;
 			WR_N = 0;
 			RD_N = 0;
-			#1;
 			if (RAM_CS_N !== 1)
 				begin
 					$display("Test1, RAM_CS_N is not 1(RD=WR=0)");
 					error_msg = "Error";				
 				end
 			else
-				#99
+				#50
 				WR_N = 1;
 				RD_N = 1;
-				#1;
 				if (RAM_CS_N !== 1)
 					begin
 						$display("Test1, RAM_CS_N is not 1(RD=WR=0 to RD=WR=1)");
@@ -104,7 +108,7 @@ module ram64k_tb;
 					error_msg = "Good!";
 
 		//Test2. Invalid MREQ/IORQ
-		#100;
+		#50;
 		Addr = 5'bxxxxx;
 		AddrIO = 4'bxxxx;
 		WR_N = 0;
@@ -119,20 +123,18 @@ module ram64k_tb;
 				error_msg = "Error";
 			end
 		else
-			#99;
+			#50;
 			MREQ_N = 0;
 			IORQ_N = 0;
-			#1;
 			if (RAM_CS_N !== 1)
 				begin
 					$display("Test2, RAM_CS_N is not 1(MREQ=IREQ=0)");
 					error_msg = "Error";				
 				end
 			else
-				#99;
+				#50;
 				MREQ_N = 1;
 				IORQ_N = 1;
-				#1;
 				if (RAM_CS_N !== 1)
 					begin
 					$display("Test2, RAM_CS_N is not 1(MREQ=IREQ=0 to MREQ=IREQ=1)");
@@ -142,7 +144,7 @@ module ram64k_tb;
 					error_msg = "Good!";
 		
 		//Test3. B8xxH write access
-		#99;
+		#50;
 		Addr = 5'b10111;
 		AddrIO = 4'bxxxx;
 		WR_N = 0;
@@ -161,7 +163,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 		
 		//Test4. B8xxH read access
-		#99;
+		#49;
 		Addr = 5'b10111;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -180,7 +182,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test5. B7xxH, read access
-		#99;
+		#49;
 		Addr = 5'b10110;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -199,7 +201,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test6. C000H, read access
-		#99;
+		#49;
 		Addr = 5'b11000;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -218,7 +220,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test7. FFFFH, read access
-		#100;
+		#50;
 		Addr = 5'b11111;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -236,7 +238,7 @@ module ram64k_tb;
 			error_msg = "Good!";
 			
 		//Test8. FFFFH, then B800H read access
-		#100;
+		#50;
 		Addr = 5'b11111;
 		AddrIO = 4'bxxxx;
 		WR_N = 1;
@@ -251,7 +253,7 @@ module ram64k_tb;
 				error_msg = "Error";
 			end
 		else
-			#99;
+			#49;
 			Addr = 5'b10111;
 			#1;
 			if (RAM_CS_N !== 0 || RAM_WE_N !== 1 || RAM_OE_N !== 0 || RAM_A1514 !== 2'b00)
@@ -269,7 +271,8 @@ module ram64k_tb;
 		//Test11. Switch to bank 3
 			
 		//End
-		#100;
+		#50;
+		testcase = "END.        ";
 	end
       
 endmodule

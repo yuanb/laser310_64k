@@ -40,10 +40,12 @@
 
 ## Input
 # A15 = Addr<4>, A14 = Addr<3>, A13 = Addr<2>, A12 = Addr<1>, A11 = Addr<0>
+
 net "MREQ_N"	loc = "E2";
 net "IORQ_N"	loc = "C2";
 net "RD_N"		loc = "B4";
 net "WR_N"		loc = "B5";
+net "clk"		loc = "G1";
 net "Addr<0>"	loc = "A3";
 net "Addr<1>"	loc = "A4";
 net "Addr<2>"	loc = "A6";

@@ -4,8 +4,9 @@
 //Addr = A15 - A11
 //A15 = Addr<4>, A14 = Addr<3>, A13 = Addr<2>, A12 = Addr<1>, A11 = Addr<0>
 //AddrIO = A7,A6,A5,A4
-module top(/*Input*/ Addr, AddrIO, WR_N, RD_N, MREQ_N, IORQ_N, D1D0,/*Output*/ RAM_A1514, RAM_CS_N, RAM_OE_N, RAM_WE_N, /*Led*/ led1, led2);
+module top(/*Input*/ clk, Addr, AddrIO, WR_N, RD_N, MREQ_N, IORQ_N, D1D0,/*Output*/ RAM_A1514, RAM_CS_N, RAM_OE_N, RAM_WE_N, /*Led*/ led1, led2);
 
+	input wire clk;
 	input wire[4:0] Addr;
 	input wire[3:0] AddrIO;
 	input wire WR_N;
@@ -35,7 +36,7 @@ module top(/*Input*/ Addr, AddrIO, WR_N, RD_N, MREQ_N, IORQ_N, D1D0,/*Output*/ R
 
 	initial bank = 2'b01;
 	
-	always @*
+	always @(posedge clk)
 	begin
 		if (IORQ_N == 1'b0 && MREQ_N == 1'b1 && WR_N==1'b0 && RD_N==1'b1 && AddrIO == 4'b0111)
 			bank = D1D0;

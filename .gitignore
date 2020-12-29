@@ -4,6 +4,7 @@ top_html/
 _ngo/
 _xmsgs/
 xst/
+xlnx_auto_0_xdb/
 .DS_Store
 *.html
 *.xml
@@ -40,3 +41,5 @@ _impact.cmd
 fuse.xmsgs
 fuseRelaunch.cmd
 isim.cmd
+iseconfig/top.xreport
+
