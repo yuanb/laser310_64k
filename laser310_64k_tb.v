@@ -1,27 +1,5 @@
 `timescale 1ns / 1ns
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   21:47:40 12/11/2020
-// Design Name:   top
-// Module Name:   C:/dev/cpld_learning/vzdos138/vzdos138_tb.v
-// Project Name:  vzdos138
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: top
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 module ram64k_tb;
 
 	// Inputs
