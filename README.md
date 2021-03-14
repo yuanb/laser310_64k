@@ -1,4 +1,6 @@
 ## laser310_64k
+
+Port 70-7F for bank switching  
  
 ## No banking 64k
 
