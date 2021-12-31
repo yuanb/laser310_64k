@@ -1,5 +1,7 @@
 # Vtech Laser 310 64K memory extension
 
+CPLD: pldKit XK2C95XL XILINX CPLD board
+
 ## laser310_64k
 
 Port 70-7F for bank switching  
