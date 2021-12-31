@@ -1,3 +1,5 @@
+# Vtech Laser 310 64K memory extension
+
 ## laser310_64k
 
 Port 70-7F for bank switching  
