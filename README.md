@@ -1,5 +1,10 @@
 # Vtech Laser 310 64K memory extension
 
+![Bootup RAM](boot%20ram.png)
+
+![64k_cpld](64k_cpld.png)
+
+
 CPLD: pldKit XK2C95XL XILINX CPLD board
 
 ## laser310_64k
